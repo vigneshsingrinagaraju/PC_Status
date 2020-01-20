@@ -1,0 +1,52 @@
+<style>
+  .running {
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center
+  }
+  .stop {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center
+  }
+  </style>
+<div class="row" style="margin-top: 5%">
+    <div class=" col-lg-offset-1 col-lg-10 col-sm-10 col-md-10 col-xs-10 text-center">
+      <h3><b>PC's Status</b></h3>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+<div class=" col-lg-offset-1 col-lg-10 col-sm-10 col-md-10 col-xs-10 text-center" style="padding: 10px;
+border-radius: 6px;
+box-shadow: 0 3px 8px 0 rgba(0,0,0,0.16), 0 0 0 2px rgba(0,0,0,0.08);
+margin-top:10px
+">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Status</th>
+        <th scope="col">Store-Id</th>
+        <th scope="col">Address</th>
+        <th scope="col">Drive-In Status</th>
+        <th scope="col">Hardware Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="status in statusList">
+        <td><span class="running" ng-if="status.status=='running'"></span><span class="stop" ng-if="status.status=='stop'"></span></td>
+        <td>{{status.storeId}}</td>
+        <td>{{status.address}}</td>
+        <td><span><b>Total</b>&nbsp;:&nbsp;{{status.total}}</span>&nbsp;&nbsp;&nbsp; <span><b>Last hour</b>&nbsp;:&nbsp;{{status.lastHour}}</span><br/><br/><span><b>Active</b>&nbsp;:&nbsp;{{status.active}}</span></td>
+        <td><span><b>GPU Temperature</b>&nbsp;:&nbsp;{{status.gpuTemperature}}</span><br/><br/> <span><b>Memory</b>&nbsp;:&nbsp;{{status.memory}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

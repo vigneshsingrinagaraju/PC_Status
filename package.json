@@ -1,0 +1,24 @@
+{
+     "name": "PC_Status",
+     "version": "0.0.1",
+     "description": "PC Status",
+     "dependencies": {
+          "compression": "^1.7.3",
+          "express": "*"
+     },
+     "engine": "node >=0.6.x",
+     "scripts": {
+          "start": "node server.js"
+     },
+     "main": "server.js",
+     "repository": {
+          "type": "git",
+          "url": ""
+     },
+     "author": "PC Status",
+     "license": "PC Status",
+     "bugs": {
+          "url": ""
+     },
+     "homepage": "/"
+}
